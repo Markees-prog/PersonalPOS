@@ -4,13 +4,24 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 
-
+/**
+ * The Class Main.
+ * 
+ * @author Markees Ewers
+ * @version 10/5/2024
+ */
 public class Main extends Application {
-	private static final String WINDOW_TITLE = "Markees Ewers Bill System";
+	
+	/** The Constant GUI_RESOURCE. */
 	private static final String GUI_RESOURCE = "view/MainWindow.fxml";
+	
+	/**
+	 * Start.
+	 *
+	 * @param primaryStage the primary stage
+	 */
 	@Override
 	public void start(Stage primaryStage) {
 		try {
@@ -20,11 +31,16 @@ public class Main extends Application {
 			Scene scene = new Scene(pane);
 			primaryStage.setScene(scene);
 			primaryStage.show();
-		} catch(Exception e) {
-			e.printStackTrace();
+		} catch (Exception ex) {
+			ex.printStackTrace();
 		}
 	}
 	
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 */
 	public static void main(String[] args) {
 		launch(args);
 	}
